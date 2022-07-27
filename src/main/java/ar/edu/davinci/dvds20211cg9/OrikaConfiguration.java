@@ -7,9 +7,13 @@ import org.springframework.context.annotation.Configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import ar.edu.davinci.dvds20211cg9.controller.request.ClienteInsertRequest;
+import ar.edu.davinci.dvds20211cg9.controller.request.ClienteUpdateRequest;
 import ar.edu.davinci.dvds20211cg9.controller.request.PrendaInsertRequest;
 import ar.edu.davinci.dvds20211cg9.controller.request.PrendaUpdateRequest;
+import ar.edu.davinci.dvds20211cg9.controller.response.ClienteResponse;
 import ar.edu.davinci.dvds20211cg9.controller.response.PrendaResponse;
+import ar.edu.davinci.dvds20211cg9.domain.Cliente;
 import ar.edu.davinci.dvds20211cg9.domain.Prenda;
 import ma.glasnost.orika.CustomMapper;
 import ma.glasnost.orika.MapperFacade;
@@ -48,6 +52,14 @@ public class OrikaConfiguration {
 				prendaResponse.setPrecioBase(prenda.getPrecioBase());
 			}
 		}).register();
+		
+		
+		// CLIENTE
+				
+		mapperFactory.classMap(Cliente.class, ClienteInsertRequest.class).byDefault().register();
+		mapperFactory.classMap(Cliente.class, ClienteUpdateRequest.class).byDefault().register();
+		mapperFactory.classMap(Cliente.class, ClienteResponse.class).byDefault().register();
+
 
 		
 		// RETORNAMOS LA INSTANCIA MAPPER FACTORY
@@ -56,5 +68,3 @@ public class OrikaConfiguration {
 	
 	
 }
-
-
