@@ -53,5 +53,9 @@ public class Prenda implements Serializable {
 	public BigDecimal getPrecioFinal() {
 		return precioBase;
 	}
+
+	public String getDescripcion() {
+		return descripcion + " " ;
+	}
 	
 }

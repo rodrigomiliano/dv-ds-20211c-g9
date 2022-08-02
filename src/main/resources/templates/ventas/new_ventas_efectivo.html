@@ -34,8 +34,16 @@
 					        </option>
 					    </select>
 					</td>
-					
-				
+					<td>Prenda:</td>
+					<td th:object="${prenda}">
+					    <select id="prenda" name="prenda">
+					        <option value="">Elija una prenda</option>
+					        <option th:each="prenda : ${prenda}"
+					                th:value="${prenda.id}"
+					                th:text="${prenda.getDescripcion}">
+					        </option>
+					    </select>
+					</td>				
 				</tr>
 
 						<td colspan="2"><button type="submit">Grabar</button></td>
