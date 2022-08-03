@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Editar Prenda</title>
+	<meta charset="utf-8" />
+	<title>Editar Prenda</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Editar Prenda</h1>
+		<h1>
+			<font color="blue">
+				Editar Prenda
+			</font>
+		</h1>
 		<br />
+
 		<table>
 			<tbody>
 				<tr>
@@ -19,8 +25,7 @@
 			</tbody>
 		</table>
 		<br />
-		<form action="#" th:action="@{/tienda/prendas/save}"
-			th:object="${prenda}" method="post">
+		<form action="#" th:action="@{/tienda/prendas/save}" th:object="${prenda}" method="post">
 
 			<table border="0" cellpadding="10">
 				<tr>
@@ -35,14 +40,12 @@
 				<tr>
 					<td>Tipo:</td>
 					<td th:object="${tipoPrendas}">
-					    <select id="tipo" name="tipo">
-  					        <option value="">Elija un tipo</option>
-					        <option th:each="tipoPrenda : ${tipoPrendas}"
-					                th:value="${tipoPrenda}"
-					                th:text="${tipoPrenda.descripcion}"
-					                th:selected="${tipoPrenda==tipoPrendaActual}">
-					        </option>
-					    </select>
+						<select id="tipo" name="tipo">
+							<option value="">Elija un tipo</option>
+							<option th:each="tipoPrenda : ${tipoPrendas}" th:value="${tipoPrenda}"
+								th:text="${tipoPrenda.descripcion}" th:selected="${tipoPrenda==tipoPrendaActual}">
+							</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
@@ -56,4 +59,5 @@
 		</form>
 	</div>
 </body>
+
 </html>

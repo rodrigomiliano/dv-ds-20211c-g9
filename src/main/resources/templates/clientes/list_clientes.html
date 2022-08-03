@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Administrador de Clientes</title>
+	<meta charset="utf-8" />
+	<title>Administrador de Clientes</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Listado de Clientes</h1>
+		<h1>
+			<font color="blue">
+				Listado de Clientes
+			</font>
+		</h1>
 		<br />
 
 		<table>
@@ -35,11 +40,11 @@
 					<td th:text="${cliente.nombre}">Nombre</td>
 					<td th:text="${cliente.apellido}">Apellido</td>
 					<td><a th:href="@{'/tienda/clientes/edit/' + ${cliente.id}}">Editar</a>
-						&nbsp;&nbsp;&nbsp; <a
-						th:href="@{'/tienda/clientes/delete/' + ${cliente.id}}">Borrar</a></td>
+						&nbsp;&nbsp;&nbsp; <a th:href="@{'/tienda/clientes/delete/' + ${cliente.id}}">Borrar</a></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </body>
+
 </html>

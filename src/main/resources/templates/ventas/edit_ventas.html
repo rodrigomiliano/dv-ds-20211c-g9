@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Editar Prenda</title>
+	<meta charset="utf-8" />
+	<title>Editar Prenda</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Editar Venta</h1>
+		<h1>
+			<font color="blue">
+				Editar Venta
+			</font>
+		</h1>
 		<br />
+
 		<table>
 			<tbody>
 				<tr>
@@ -19,8 +25,7 @@
 			</tbody>
 		</table>
 		<br />
-		<form action="#" th:action="@{/tienda/ventas/save}"
-			th:object="${venta}" method="post">
+		<form action="#" th:action="@{/tienda/ventas/save}" th:object="${venta}" method="post">
 
 			<table border="0" cellpadding="10">
 				<tr>
@@ -29,25 +34,25 @@
 					</td>
 				</tr>
 				<tr>
-			<thead>
-				<tr>
-					<th>Prenda ID</th>
-					<th>Descripción</th>
-					<th>Tipo</th>
-					<th>Precio Base</th>
-					<th>Acciones</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="prenda : ${listItems}">
-					<td th:text="${id}">Prenda ID</td>
-					<td><a th:href="@{'/tienda/prendas/delete/' + ${prenda.id}}">Borrar</a></td>
-				</tr>
-			</tbody>
+					<thead>
+						<tr>
+							<th>Prenda ID</th>
+							<th>Descripción</th>
+							<th>Tipo</th>
+							<th>Precio Base</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="prenda : ${listItems}">
+							<td th:text="${id}">Prenda ID</td>
+							<td><a th:href="@{'/tienda/prendas/delete/' + ${prenda.id}}">Borrar</a></td>
+						</tr>
+					</tbody>
 				</tr>
 				<tr>
 					<td>Precio Base:</td>
-					
+
 				</tr>
 				<tr>
 					<td colspan="2"><button type="submit">Grabar</button></td>
@@ -56,4 +61,5 @@
 		</form>
 	</div>
 </body>
+
 </html>

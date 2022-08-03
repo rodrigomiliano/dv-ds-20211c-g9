@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Crea un nuevo ventas Efectivo</title>
+	<meta charset="utf-8" />
+	<title>Crea un nuevo ventas Efectivo</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Crear una nueva ventas en Efectivo</h1>
+		<h1>
+			<font color="blue">
+				Crear una nueva ventas en Efectivo
+			</font>
+		</h1>
 		<br />
+
 		<table>
 			<tbody>
 				<tr>
@@ -19,38 +25,36 @@
 			</tbody>
 		</table>
 		<br />
-		<form action="#" th:action="@{/tienda/ventas/efectivo/save}"
-			th:object="${venta}" method="post">
+		<form action="#" th:action="@{/tienda/ventas/efectivo/save}" th:object="${venta}" method="post">
 
 			<table border="0" cellpadding="10">
 				<tr>
 					<td>Cliente:</td>
 					<td th:object="${cliente}">
-					    <select id="cliente" name="cliente">
-					        <option value="">Elija un cliente</option>
-					        <option th:each="cliente : ${cliente}"
-					                th:value="${cliente.id}"
-					                th:text="${cliente.getRazonSocial}">
-					        </option>
-					    </select>
+						<select id="cliente" name="cliente">
+							<option value="">Elija un cliente</option>
+							<option th:each="cliente : ${cliente}" th:value="${cliente.id}"
+								th:text="${cliente.getRazonSocial}">
+							</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
 					<td>Prenda:</td>
 					<td th:object="${prenda}">
-					    <select id="prenda" name="prenda">
-					        <option value="">Elija una prenda</option>
-					        <option th:each="prenda : ${prenda}"
-					                th:value="${prenda.id}"
-					                th:text="${prenda.descripcion}">
-					        </option>
-					    </select>
-					</td>				
+						<select id="prenda" name="prenda">
+							<option value="">Elija una prenda</option>
+							<option th:each="prenda : ${prenda}" th:value="${prenda.id}"
+								th:text="${prenda.descripcion}">
+							</option>
+						</select>
+					</td>
 				</tr>
 
-						<td colspan="2"><button type="submit">Grabar</button></td>
+				<td colspan="2"><button type="submit">Grabar</button></td>
 			</table>
 		</form>
 	</div>
 </body>
+
 </html>

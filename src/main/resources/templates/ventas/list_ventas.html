@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Administrador de Ventas</title>
+	<meta charset="utf-8" />
+	<title>Administrador de Ventas</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Listado de Ventas</h1>
+		<h1>
+			<font color="blue">
+				Listado de Ventas
+			</font>
+		</h1>
 		<br />
 
 		<table>
@@ -38,12 +43,13 @@
 					<td th:text="${venta.razonSocial}">Cliente</td>
 					<td th:text="${venta.importeFinalStr}" style="text-align:right;">Importe Final</td>
 					<td><a th:href="@{'/tienda/ventas/edit/' + ${venta.id}}">Editar</a>
-						&nbsp;&nbsp;&nbsp; 
-<!-- 						<a th:href="@{'/tienda/ventas/delete/' + ${venta.id}}">Borrar</a> -->
+						&nbsp;&nbsp;&nbsp;
+						<!-- 						<a th:href="@{'/tienda/ventas/delete/' + ${venta.id}}">Borrar</a> -->
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </body>
+
 </html>

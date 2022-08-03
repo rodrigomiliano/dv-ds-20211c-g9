@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8" />
-<title>Editar Cliente</title>
+	<meta charset="utf-8" />
+	<title>Editar Cliente</title>
 </head>
-<body>
+
+<body bgcolor="orange">
 	<div align="center">
-		<h1>Editar Cliente</h1>
+		<h1>
+			<font color="blue">
+				Editar Cliente
+			</font>
+		</h1>
 		<br />
+		
 		<table>
 			<tbody>
 				<tr>
@@ -19,8 +25,7 @@
 			</tbody>
 		</table>
 		<br />
-		<form action="#" th:action="@{/tienda/clientes/save}"
-			th:object="${cliente}" method="post">
+		<form action="#" th:action="@{/tienda/clientes/save}" th:object="${cliente}" method="post">
 
 			<table border="0" cellpadding="10">
 				<tr>
@@ -43,4 +48,5 @@
 		</form>
 	</div>
 </body>
+
 </html>
