@@ -64,8 +64,7 @@
 					<td th:text="${venta.razonSocial}">Cliente</td>
 					<td th:text="${venta.importeFinalStr}" style="text-align:right;">Importe Final</td>
 					<td><a th:href="@{'/tienda/ventas/edit/' + ${venta.id}}">Editar</a>
-						&nbsp;&nbsp;&nbsp;
-						<!-- 						<a th:href="@{'/tienda/ventas/delete/' + ${venta.id}}">Borrar</a> -->
+						&nbsp;&nbsp;&nbsp; <a th:href="@{'/tienda/ventas/delete/' + ${venta.id}}">Borrar</a>
 					</td>
 				</tr>
 			</tbody>

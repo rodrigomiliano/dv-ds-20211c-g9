@@ -54,27 +54,22 @@
 					<td><input type="text" th:field="*{id}" readonly="readonly" />
 					</td>
 				</tr>
-				<tr>
-					<thead>
-						<tr>
-							<th>Prenda ID</th>
-							<th>Descripción</th>
-							<th>Tipo</th>
-							<th>Precio Base</th>
-							<th>Acciones</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="prenda : ${listItems}">
-							<td th:text="${id}">Prenda ID</td>
-							<td><a th:href="@{'/tienda/prendas/delete/' + ${prenda.id}}">Borrar</a></td>
-						</tr>
-					</tbody>
-				</tr>
-				<tr>
-					<td>Precio Base:</td>
 
+				<tr>
+					<td>Cliente:</td>
+					<td><input type="text" th:field="*{cliente}" /></td>
 				</tr>
+
+				<tr>
+					<td>Fecha:</td>
+					<td><input type="text" th:field="*{fecha}" /></td>
+				</tr>
+
+				<tr>
+					<td>Importe:</td>
+					<td><input type="text" th:field="*" /></td>
+				</tr>
+
 				<tr>
 					<td colspan="2"><button type="submit">Grabar</button></td>
 				</tr>

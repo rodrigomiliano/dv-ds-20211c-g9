@@ -62,10 +62,10 @@
 				</tr>
 				<tr>
 					<td>Prenda:</td>
-					<td th:object="${prenda}">
+					<td th:object="${descripcion}">
 						<select id="prenda" name="prenda">
 							<option value="">Elija una prenda</option>
-							<option th:each="prenda : ${prenda}" th:value="${prenda.id}"
+							<option th:each="descripcion : ${descripcion}" th:value="${descripcion}"
 								th:text="${prenda.descripcion}">
 							</option>
 						</select>
