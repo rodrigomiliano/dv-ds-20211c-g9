@@ -59,17 +59,25 @@
 							</option>
 						</select>
 					</td>
-
-
 				</tr>
-				<tr>
 
+				<tr>
+					<td>Prenda:</td>
+					<td th:object="${descripcion}">
+						<select id="prenda" name="prenda">
+							<option value="">Elija una prenda</option>
+							<option th:each="descripcion : ${descripcion}" th:value="${descripcion}"
+								th:text="${prenda.descripcion}">
+							</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
 					<td>Cuotas:</td>
 					<td><input type="text" th:field="*{cantidadCuotas}" /></td>
-
-
-
 				</tr>
+
 				<td colspan="2"><button type="submit">Grabar</button></td>
 			</table>
 		</form>
