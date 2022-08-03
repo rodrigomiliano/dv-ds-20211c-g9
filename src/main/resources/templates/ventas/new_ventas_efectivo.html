@@ -34,13 +34,15 @@
 					        </option>
 					    </select>
 					</td>
+				</tr>
+				<tr>
 					<td>Prenda:</td>
 					<td th:object="${prenda}">
 					    <select id="prenda" name="prenda">
 					        <option value="">Elija una prenda</option>
 					        <option th:each="prenda : ${prenda}"
 					                th:value="${prenda.id}"
-					                th:text="${prenda.getDescripcion}">
+					                th:text="${prenda.descripcion}">
 					        </option>
 					    </select>
 					</td>				
