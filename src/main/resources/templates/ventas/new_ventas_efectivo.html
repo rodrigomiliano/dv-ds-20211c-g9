@@ -65,7 +65,7 @@
 					<td th:object="${descripcion}">
 						<select id="prenda" name="prenda">
 							<option value="">Elija una prenda</option>
-							<option th:each="descripcion : ${descripcion}" th:value="${descripcion}"
+							<option th:each="prenda : ${listPrendas}" th:value="${prenda.id}"
 								th:text="${prenda.descripcion}">
 							</option>
 						</select>
